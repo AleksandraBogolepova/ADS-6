@@ -14,12 +14,11 @@ struct SYM {
 
 template<typename T, int size>
 class TPQueue {
-
  private:
     struct SYM arr[size];
     int count;
     count = 0;
-    
+
  public:
     void push(SYM x) {
         if (count < size) {
