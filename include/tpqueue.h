@@ -14,18 +14,19 @@ struct SYM {
 
 template<typename T, int size>
 class TPQueue {
-private:
+
+ private:
     struct SYM arr[size];
     int count;
     count = 0;
-public:
+    
+ public:
     void push(SYM x) {
         if (count < size) {
             for (int i = count++; i >= 0; i--) {
                 if (x.prior <= arr[i - 1].prior && i > 0) {
                     arr[i] = arr[i - 1];
-                }
-                else {
+                } else {
                     arr[i] = c;
                     break;
                 }
@@ -35,12 +36,10 @@ public:
     SYM pop() {
         if (count > 0) {
             return arr[--count];
-        }
-        else {
+        } else {
             throw "Error";
         }
     }
-
 };
 
 
