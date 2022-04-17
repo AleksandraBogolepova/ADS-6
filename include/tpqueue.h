@@ -20,7 +20,7 @@ class TPQueue {
                 if (x.prior <= arr[i - 1].prior && i > 0) {
                     arr[i] = arr[i - 1];
                 } else {
-                    arr[i] = c;
+                    arr[i] = x;
                     break;
                 }
             }
